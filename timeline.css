@@ -1,0 +1,159 @@
+/* Estilos para a seção de Experiência Profissional (Timeline) */
+
+.experiencia {
+    background-color: #0a0a0a;
+    padding: 100px 4%;
+    position: relative;
+}
+
+.experiencia::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/pattern-bg.png');
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: rgba(0, 255, 8, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #00ff08;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    box-shadow: 0 0 10px rgba(0, 255, 8, 0.5);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 12px;
+    font-weight: 600;
+    color: #00ff08;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -150px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -150px;
+}
+
+.timeline-content {
+    padding: 25px;
+    background-color: #111;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 8, 0.1);
+}
+
+.timeline-content h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    color: #00ff08;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 40px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-dot {
+        left: 31px;
+        right: auto;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 31px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        top: -5px;
+        left: 0 !important;
+        right: auto !important;
+        margin-bottom: 10px;
+        display: inline-block;
+        padding: 3px 10px;
+        background-color: rgba(0, 255, 8, 0.1);
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,160 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --cor-primaria: #00a6ff;
+    --cor-secundaria: #0077b6;
+    --cor-destaque: #00d9ff;
+    --cor-texto: #f8f9fa;
+    --cor-texto-secundaria: #adb5bd;
+    --cor-fundo: #0a0a0a;
+    --cor-fundo-secundaria: #111111;
+    --cor-fundo-terciaria: #1a1a1a;
+    --transicao: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    padding: 100px 4%;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicao);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Botões */
+.btn-contato button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    color: #000;
+    box-shadow: 0px 0px 10px rgba(0, 255, 8, 0.5);
+}
+
+button:hover, form .btn-enviar input:hover {
+    box-shadow: 0px 0px 15px #00ff08;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #00ff08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 8, 0.5);
+    transition: 0.3s;
+    color: #000;
+}
+
+.btn-social button:hover {
+    transform: translateY(-5px);
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2.titulo::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #00ff08;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2.titulo span {
+    color: #00ff08;
+    position: relative;
+}
+
+section {
+    padding: 100px 4%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Efeito de destaque para links e botões */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff08;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc06;
+}
+
+
+
+

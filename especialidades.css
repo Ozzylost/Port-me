@@ -1,0 +1,114 @@
+/* ESTILO DA SEÇÃO ESPECIALIDADES */
+
+section.especialidades {
+    padding: 80px 4%;
+    background-color: #0a0a0a;
+}
+
+section.especialidades .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.especialidades-box {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.especialidades-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #00ff08;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.especialidades-box:hover::before {
+    transform: translateX(0);
+}
+
+.especialidades-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 8, 0.2);
+}
+
+.especialidades-box i {
+    font-size: 70px;
+    color: #00ff08;
+    margin-bottom: 15px;
+}
+
+.especialidades-box h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.especialidades-box p {
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    list-style: none;
+}
+
+.skills-list li span {
+    display: inline-block;
+    background-color: rgba(0, 255, 8, 0.1);
+    color: #00ff08;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(0, 255, 8, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skills-list li span:hover {
+    background-color: #00ff08;
+    color: #000;
+}
+
+/* Ajuste para garantir que a seção fique bem distribuída em desktop */
+@media screen and (min-width: 1200px) {
+    section.especialidades .flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .especialidades-box {
+        flex: 0 0 calc(33.33% - 30px);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .especialidades-box {
+        flex: 0 0 calc(50% - 20px);
+    }
+}

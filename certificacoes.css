@@ -1,0 +1,92 @@
+/* Estilos para a seção de Certificações e Formação */
+
+.certificacoes {
+    background-color: #0a0a0a;
+    padding: 100px 4%;
+}
+
+.certificacoes .flex {
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.certificacoes-col {
+    flex: 1;
+    background-color: #111;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificacoes-col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 8, 0.1);
+}
+
+.certificacoes-col h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.certificacoes-col h3 i {
+    color: #00ff08;
+    font-size: 28px;
+}
+
+.certificado-item, .formacao-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certificado-item:last-child, .formacao-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.certificado-icone, .formacao-icone {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: rgba(0, 255, 8, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificado-icone i, .formacao-icone i {
+    color: #00ff08;
+    font-size: 24px;
+}
+
+.certificado-info h4, .formacao-info h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.certificado-info p, .formacao-info p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.certificado-ano, .formacao-periodo {
+    display: inline-block;
+    background-color: rgba(0, 255, 8, 0.1);
+    color: #00ff08;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}

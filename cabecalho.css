@@ -1,0 +1,126 @@
+/* ESTILO DO CABEÇALHO */
+
+header {
+    padding: 20px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s ease;
+    background-color: rgba(10, 10, 10, 0.95);
+}
+
+header.header-scrolled {
+    padding: 15px 4%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .logo i {
+    color: #00ff08;
+    font-size: 30px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00ff08;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00ff08;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-mobile {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-mobile:hover {
+    color: #00ff08;
+}
+
+.menu-mobile.active i::before {
+    content: "\F659";
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 1020px) {
+    .menu-desktop {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 10, 10, 0.95);
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .menu-desktop.active {
+        display: block;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header nav ul li {
+        padding: 15px 0;
+    }
+    
+    .menu-mobile {
+        display: block;
+    }
+}
